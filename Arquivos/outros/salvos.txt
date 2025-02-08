@@ -1,0 +1,191 @@
+create database cicatrizes_verdes;
+show databases;
+use cicatrizes_verdes;
+
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE posts (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    usuario_id INT NOT NULL,
+    usuario_nome VARCHAR(50) NOT NULL,
+    conteudo TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE likes (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    post_id INT NOT NULL,
+    usuario_id INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE,
+    FOREIGN KEY (usuario_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE comentarios (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    post_id INT NOT NULL,
+    usuario_id INT NOT NULL,
+    usuario_nome VARCHAR(50) NOT NULL,
+    conteudo TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE,
+    FOREIGN KEY (usuario_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+
+select * from users;
+
+
+
+
+
+
+
+
+
+
+
+<?php
+session_start();
+
+// Verifica se o usuário está logado
+if (!isset($_SESSION['user_id'])) {
+    // Redireciona para a página de login se o usuário não estiver logado
+    header("Location: login.php");
+    exit;
+}
+
+// Obtém o nome do usuário da sessão
+$user_name = $_SESSION['user_nome']; // Nome do usuário
+$user_email = $_SESSION['user_email']; // Email do usuário
+$user_id = $_SESSION['user_id']; // ID do usuário
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------- colocar nas outras páginas------------------------------------------------------
+
+
+       <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="inicial.php">Cicatrizes Verdes</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <button class="btn btn-outline-success" id="user-info-button">Info do Usuário</button>
+                </li>
+                <li class="nav-item">
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Card com informações do usuário -->
+<div id="user-info-card" class="card" style="display: none; position: absolute; right: 20px; top: 70px; z-index: 1000;">
+    <div class="card-body">
+        <h5 class="card-title">Informações do Usuário</h5>
+        <p class="card-text"><strong>Nome:</strong> <?php echo htmlspecialchars($user_name); ?></p>
+        <p class="card-text"><strong>Email:</strong> <?php echo htmlspecialchars($user_email); ?></p> <!-- Adicione a variável $user_email -->
+        <p class="card-text"><strong>ID:</strong> <?php echo htmlspecialchars($user_id); ?></p> <!-- Adicione a variável $user_id -->
+        <form action="logout.php" method="POST">
+        <button type="submit" class="btn btn-danger" style="background-color: #e8f5e9;color: #56ab2f;border: none;width: 70px;height: 50px;">Sair</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+/* Navbar */
+.navbar {
+    background-color: rgba(255, 255, 255);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #56ab2f;
+}
+
+.navbar-brand:hover {
+    color: #56ab2f; /* Mantém a cor ao passar o mouse */
+}
+
+.nav-link {
+    color: #56ab2f;
+}
+
+.nav-link:hover {
+    color: #ffffff; /* Cor ao passar o mouse nos links */
+}
+
+#user-info-button {
+    background-color: #e8f5e9;
+    color: #56ab2f;
+    border: none;
+}
+
+#user-info-button:hover {
+    background-color: #56ab2f;
+    color: white;
+}
+
+#user-info-card {
+    width: 300px; /* Ajuste a largura conforme necessário */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-top: 15px;
+    margin-inline: -15px;
+    animation: fadeIn 1.0s ease-in;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #56ab2f;
+}
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById('user-info-button').addEventListener('click', function() {
+    const card = document.getElementById('user-info-card');
+    if (card.style.display === 'none' || card.style.display === '') {
+        card.style.display = 'block';
+    } else {
+        card.style.display = 'none';
+    }
+});
+
+
