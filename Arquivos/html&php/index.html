@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cicatrizes Verdes</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts: Josefin Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style-index.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand">Cicatrizes Verdes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link-active" aria-current="page" href="login.php">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Title and Subtitle -->
+    <div class="hero-section">
+        <div class="container text-center">
+            <h1>Cicatrizes Verdes</h1>
+            <p>Inspirando Mudanças e Cultivando Soluções Para um Mundo Mais Saudável</p>
+        </div>
+    </div>
+
+    <!-- Informative Numbers Section -->
+<section class="info-cards">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="info-card">
+                    <i class="fas fa-cloud-sun fa-3x mb-3"></i>
+                    <h2>Entre 28% e 40%</h2>
+                    <p>Redução necessária nas emissões de CO₂ até 2030</p>
+                </div>
+            </div>
+            <!-- Card 2 (Temperatura global recomendada) -->
+            <div class="col-md-4">
+                <div class="info-card">
+                    <i class="fas fa-thermometer-three-quarters fa-3x mb-3"></i>
+                    <h2>2°C</h2>
+                    <p>Aumento máximo da temperatura global recomendado</p>
+                </div>
+            </div>
+            <!-- Card 3 (Florestas desmatadas em 2023) -->
+            <div class="col-md-4">
+                <div class="info-card">
+                    <i class="fas fa-leaf fa-3x mb-3"></i>
+                    <h2>3,7 milhões</h2>
+                    <p>Hectares de florestas desmatadas em 2023</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Information About Pollution -->
+    <section class="pollution-info">
+        <div class="container">
+            <h2>Impactos da Poluição</h2>
+            <p>
+                A poluição do ar, da água e do solo tem efeitos devastadores sobre o meio ambiente e a saúde humana. As emissões de gases de efeito estufa estão contribuindo para o aquecimento global, resultando em eventos climáticos extremos, elevação do nível do mar e perda de biodiversidade.
+            </p>
+            <p>
+                É essencial adotar práticas sustentáveis, reduzir o consumo de combustíveis fósseis e promover a reciclagem para mitigar esses impactos e proteger nosso planeta para as futuras gerações.
+            </p>
+        </div>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="charts">
+        <div class="container">
+            <h2 class="chart-title">Indicadores Ambientais</h2>
+            <div class="row">
+                <!-- Gráfico de Emissões de CO₂ -->
+                <div class="col-md-6">
+                    <h3 style="color: white;" >Emissões de CO₂ (Milhões de toneladas)</h3>
+                    <canvas id="co2Chart"></canvas>
+                </div>
+                <!-- Gráfico de Temperatura Global -->
+                <div class="col-md-6">
+                    <h3 style="color: white;" >Temperatura Global (°C)</h3>
+                    <canvas id="tempChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Cicatrizes Verdes. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script-index.js"></script>
+    
+</body>
+</html>
