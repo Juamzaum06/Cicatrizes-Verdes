@@ -1,0 +1,232 @@
+/* Estilo para o corpo da página */
+body {
+    background-color: #56ab2f;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #ffffff;
+    margin-top: 56px; /* Para compensar a altura da navbar fixa */
+    animation: fadeInBody 1.5s ease-in;
+}
+
+/* Animação para o corpo da página */
+@keyframes fadeInBody {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(255, 255, 255);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #56ab2f;
+}
+
+.navbar-brand:hover {
+    color: #56ab2f; /* Mantém a cor ao passar o mouse */
+}
+
+.nav-link {
+    color: #56ab2f;
+}
+
+.nav-link:hover {
+    color: #ffffff; /* Cor ao passar o mouse nos links */
+}
+
+#user-info-button {
+    background-color: #e8f5e9;
+    color: #56ab2f;
+    border: none;
+}
+
+#user-info-button:hover {
+    background-color: #56ab2f;
+    color: white;
+}
+
+#user-info-card {
+    width: 300px; /* Ajuste a largura conforme necessário */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-top: 15px;
+    margin-inline: -15px;
+    animation: fadeIn 1.0s ease-in;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #56ab2f;
+}
+
+
+.card {
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    animation: fadeInCard 1.5s ease-in-out;
+}
+
+.card i {
+    color: #5cb85c;
+}
+
+.card .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #56ab2f;
+}
+
+.card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    align-self: center;
+}
+
+.card .btn:hover {
+    background-color: #56ab2f;
+    color: white;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+/* Seção de Notícias com animação de fade-in */
+#noticias {
+    padding: 60px 0;
+    background-color: white;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#noticias h2 {
+    color: #56ab2f;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#noticias p {
+    color: #56ab2f;
+    padding-bottom: 20px;
+    font-size: 1.25rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+/* Estilo para os cards de notícias com transições */
+.news-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 620px;
+    margin-bottom: 30px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: fadeInCard 1.5s ease-in-out;
+}
+
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.news-image {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.3s;
+    margin: -15px;
+}
+
+.news-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #56ab2f;
+    margin: 30px 0;
+}
+
+.news-description {
+    color: #333333;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    flex-grow: 1;
+}
+
+/* Botões com transição suave */
+.btn {
+    background-color: #e8f5e9;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s;
+    color: #56ab2f;
+}
+
+.btn-outline-light:hover {
+    background-color: #56ab2f;
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* Rodapé */
+.footer {
+    background-color: #e8f5e9;
+    color: #56ab2f;
+    padding: 20px 0;
+    animation: fadeInFooter 1.5s ease-in;
+}
+
+@keyframes fadeInFooter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Efeitos de Transição e Animações para as Seções */
+#dados-ambientais, #tendencias-ambientais {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

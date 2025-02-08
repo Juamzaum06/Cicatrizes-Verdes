@@ -1,0 +1,228 @@
+/* Estilo para o corpo da página */
+body {
+    background: #56ab2f;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    animation: fadeInBody 1.5s ease-in;
+}
+
+/* Animação para o corpo da página */
+@keyframes fadeInBody {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilo para links ativos */
+.nav-link-active {
+    color: #56ab2f;
+    text-decoration: none;
+}
+
+.nav-link-active:hover {
+    color: #ffffff; /* Cor ao passar o mouse nos links */
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #56ab2f;
+}
+
+.navbar-brand:hover {
+    color: #56ab2f; /* Não mudar a cor ao passar o mouse */
+}
+
+/* Seção hero com animação */
+.hero-section {
+    padding: 20px 0 0 0;
+    text-align: center;
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding-top: 120px;
+    animation: slideInTitle 1.2s ease-in-out;
+}
+
+@keyframes slideInTitle {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    animation: fadeInText 2s ease-in;
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Cartões de informação */
+.info-cards {
+    margin: 60px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    animation: fadeInCard 1.5s ease-in-out;
+}
+
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+}
+
+.info-card h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #56ab2f;
+}
+
+.info-card p {
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+/* Seção de informações sobre poluição */
+.pollution-info {
+    background-color: #e8f5e9;
+    padding: 70px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 60px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.pollution-info h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #56ab2f;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Gráficos com animação */
+.charts {
+    margin: 60px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.charts .chart-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.charts canvas {
+    background-color: #ffffff; /* Cor de fundo dos gráficos */
+}
+/* Estilo para os cards de informação */
+.info-cards {
+    margin: 60px 0; /* Margem para espaçamento */
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.9); /* Cor de fundo */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 30px; /* Espaçamento interno */
+    text-align: center; /* Centralizar texto */
+    height: 250px; /* Altura fixa para todos os cards */
+    display: flex; /* Flexbox para centralizar conteúdo */
+    flex-direction: column; /* Colocar ícone e texto em coluna */
+    justify-content: center; /* Centralizar verticalmente */
+    transition: transform 0.3s ease; /* Efeito de transição para hover */
+}
+
+/* Efeito hover nos cards */
+.info-card:hover {
+    transform: translateY(-5px); /* Levanta o card ao passar o mouse */
+}
+
+/* Garantir que todos os cards tenham a mesma altura */
+.row {
+    align-items: stretch; /* Esticar os cards para ter a mesma altura */
+}
+
+/* Estilo para os títulos dos cards */
+.info-card h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #56ab2f;
+}
+
+.info-card p {
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+/* Animação para o rodapé */
+.footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #e8f5e9;
+    color: #56ab2f;
+    animation: fadeInFooter 1.5s ease-in;
+}
+
+@keyframes fadeInFooter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.footer p {
+    margin: 0;
+}

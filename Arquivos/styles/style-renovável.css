@@ -1,0 +1,126 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #e8f5e9;
+    color: #333;
+
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(255, 255, 255);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #56ab2f;
+}
+
+.navbar-brand:hover {
+    color: #56ab2f; /* Mantém a cor ao passar o mouse */
+}
+
+.nav-link {
+    color: #56ab2f;
+}
+
+.nav-link:hover {
+    color: #ffffff; /* Cor ao passar o mouse nos links */
+}
+
+#user-info-button {
+    background-color: #e8f5e9;
+    color: #56ab2f;
+    border: none;
+}
+
+#user-info-button:hover {
+    background-color: #56ab2f;
+    color: white;
+}
+
+#user-info-card {
+    width: 300px; /* Ajuste a largura conforme necessário */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-top: 15px;
+    margin-inline: -15px;
+    animation: fadeIn 1.0s ease-in;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #56ab2f;
+}
+
+
+#text {
+    background-color: #56ab2f;
+    color: white;
+    margin-top: 70px;
+    padding: 40px 20px; /* Adiciona espaço interno */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilo para a seção */
+.section-background {
+    background-color: white; /* Cor de fundo branca */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 30px; /* Espaçamento interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para efeito de profundidade */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Imagens */
+.img-fluid {
+    max-width: 100%; /* Mantém a imagem dentro da largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas para as imagens */
+    margin: 0 auto; /* Centraliza as imagens horizontalmente */
+    display: block; /* Para garantir que as imagens sejam tratadas como blocos */
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+
+h2, h3, h4 {
+    color: #56ab2f;
+}
+
+h6 {
+    text-align: center;
+}
+
+p, ul li {
+    font-size: 20px;
+}
+
+/* Rodapé */
+.footer {
+    background-color: white;
+    color: #56ab2f;
+    padding: 20px 0;
+    animation: fadeInFooter 1.5s ease-in;
+}
+
+@keyframes fadeInFooter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}

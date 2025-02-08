@@ -1,0 +1,166 @@
+/* Definindo a cor de fundo */
+body {
+    background-color: #56ab2f;
+    font-family: 'Josefin Sans', sans-serif;
+    animation: fadeInBody 1.5s ease-in;
+}
+
+/* Animação para o corpo da página */
+@keyframes fadeInBody {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilo para o card, com tamanho aumentado */
+.card {
+    background: white;
+    border-radius: 15px;
+    border: none;
+    max-width: 500px; /* Tamanho maior do card */
+    animation: fadeInCard 1s ease-out;
+}
+
+/* Animação para o card */
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título da página */
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #56ab2f;
+    font-weight: bold;
+    animation: fadeInTitle 1.2s ease-out;
+}
+
+/* Animação para o título */
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1.text-center.mb-4.display-5 {
+    font-weight: bold;
+}
+
+/* Texto do login */
+p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    color: #56ab2f;
+    margin-bottom: 30px;
+    animation: fadeInText 1.3s ease-out;
+}
+
+/* Animação para o texto */
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo dos inputs */
+.form-control {
+    border-radius: 10px;
+    background-color: #f8f3e8;
+    border: 2px solid #56ab2f;
+    animation: fadeInInput 1.4s ease-out;
+}
+
+/* Animação para os inputs */
+@keyframes fadeInInput {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para o botão de login */
+.btn-primary {
+    background-color: #56ab2f;
+    border-color: #56ab2f;
+    font-size: 18px;
+    border-radius: 10px;
+    animation: fadeInButton 1.5s ease-out;
+}
+
+/* Animação para os botões */
+@keyframes fadeInButton {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-primary:hover {
+    background-color: #56ab2f;
+    border-color: #56ab2f;
+}
+
+/* Botão de login do Google */
+.btn-outline-dark {
+    border-radius: 10px;
+    animation: fadeInButton 1.5s ease-out;
+}
+
+.btn-outline-dark:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo dos links */
+a {
+    color: rgb(104, 104, 104);
+    animation: fadeInLink 1.5s ease-out;
+}
+
+/* Animação para os links */
+@keyframes fadeInLink {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+a:hover {
+    color: #56ab2f;
+    text-decoration: underline;
+}
+
+/* Aplicar a animação ao card */
+.animate-fade-in {
+    animation: fadeInCard 1s ease-out;
+}

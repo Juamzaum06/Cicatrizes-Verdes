@@ -1,0 +1,179 @@
+/* Estilo para o corpo da página */
+body {
+    background-color: #e8f5e9;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #333;
+    margin-top: 56px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: rgba(255, 255, 255);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #56ab2f;
+}
+
+.navbar-brand:hover {
+    color: #56ab2f; /* Mantém a cor ao passar o mouse */
+}
+
+.nav-link {
+    color: #56ab2f;
+}
+
+.nav-link:hover {
+    color: #ffffff; /* Cor ao passar o mouse nos links */
+}
+
+#user-info-button {
+    background-color: #e8f5e9;
+    color: #56ab2f;
+    border: none;
+}
+
+#user-info-button:hover {
+    background-color: #56ab2f;
+    color: white;
+}
+
+#user-info-card {
+    width: 300px; /* Ajuste a largura conforme necessário */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-top: 15px;
+    margin-inline: -15px;
+    animation: fadeIn 1.0s ease-in;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #56ab2f;
+}
+
+/* Animação de fade-in para a seção de educação */
+#educacao {
+    background-color: white;
+    padding: 60px 0;
+}
+
+#educacao h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #56ab2f;
+    margin-bottom: 30px;
+}
+
+#educacao p.lead {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+/* Fundo da parte superior (div .background) */
+.background {
+    background-color: #56ab2f;
+    color: white;
+    margin-top: 70px;
+    padding: 40px 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.background h1, .background p {
+    color: white;
+}
+
+/* Animação para os cartões */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+    height: 300px;
+}
+
+/* Animação para as imagens dos cartões */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px  0 0;
+    transition: transform 0.3s;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #56ab2f;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Animação para os botões */
+.btn-success {
+    margin-top: auto; /* Faz o botão ficar na parte inferior do card */
+    background-color: #e8f5e9;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s;
+    width: 100%;
+    color: #56ab2f;
+}
+
+.btn-success:hover {
+    background-color: #489e24;
+    transform: translateY(-5px);
+}
+
+/* Rodapé */
+.footer {
+    background-color: #e8f5e9;
+    color: #56ab2f;
+    padding: 20px 0;
+    animation: fadeInFooter 1.5s ease-in;
+    height: 0px;
+}
+
+@keyframes fadeInFooter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.footer p {
+    margin: -12px;
+    font-size: 1rem;
+}
